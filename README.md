@@ -1,7 +1,4 @@
-# ms
-
-[![PyPI - Version](https://img.shields.io/pypi/v/ms.svg)](https://pypi.org/project/ms)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ms.svg)](https://pypi.org/project/ms)
+# gms
 
 -----
 
@@ -16,32 +13,32 @@ Although mongo is a structureless database, there are times when we need to get 
 ## Installation
 
 ```console
-pip install ms
+pip install git+https://github.com/linbuxiao/gms.git
 ```
 
 In addition to the traditional installation method, I personally recommend [pipx](https://pypa.github.io/pipx/) installation. pipx will help you to avoid global environment pollution.
 
 ```console
-pipx install ms
+pipx install git+https://github.com/linbuxiao/gms.git
 ```
 
 ## License
 
-`ms` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+`gms` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
 
 ## Usage
 
-1. Init ms config file
+1. Init gms config file
 ```console
-ms init --config_path ./.env
+gms init --config_path ./.env
 ```
 2. Fill config file
 
 3. Get mongo schema
 ```console
-ms run --config_path ./.env
+gms run --config_path ./.env
 ```
 4. If u need json format
 ```console
-ms run --config_path ./.env --output_format json
+gms run --config_path ./.env --output_format json
 ```

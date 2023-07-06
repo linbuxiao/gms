@@ -72,8 +72,12 @@ def render_table(data):
 
 def render_json(data):
     import json
-
-    content = [{"name": key, "type": value} for key, value in data.items()]
+    type_map = {
+        "str": "string",
+        "dict": "object",
+        "float": "string"
+    }
+    content = [{"name": key, "type": type_map.get(value, "string")} for key, value in data.items()]
     console.print(json.dumps(content, ensure_ascii=False))
 
 
